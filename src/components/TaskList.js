@@ -16,7 +16,9 @@ function TaskList({
   //   item.id === task.id ? { ...item, status: !item.status } : item
   // );
   // setTasks(updatedTasks);
-  const clearCompleted = () => {};
+  const clearCompleted = () => {
+    setTasks(tasks.filter((task) => task.status !== true));
+  };
   return (
     <div className="todo-items-wrapper">
       <div className="todo-items">
